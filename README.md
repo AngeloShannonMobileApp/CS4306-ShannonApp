@@ -8,7 +8,7 @@ Our Team:
   James Moore,
   Brayden Sommerfield,
   Noah Seguin,
-  Asher Guinzy,
+  Asher Guinzy
 
 Our app will have functions to:
   Be able to schedule doctors appointments (In-Person or Online Appointments),
