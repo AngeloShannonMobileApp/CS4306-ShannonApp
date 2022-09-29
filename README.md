@@ -1,4 +1,4 @@
-# CS4036-ShannonApp
+# CS4306-ShannonApp
 Shannon Mobile App
 
 We will be creating a mobile app for Shannon Health that will be more user friendly than the current app they have(MyChart)
