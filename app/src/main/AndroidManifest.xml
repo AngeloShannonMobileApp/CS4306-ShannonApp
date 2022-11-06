@@ -35,6 +35,9 @@
         <activity
             android:name=".HomePageActivity"
             android:label="Home Page"></activity>
+        <activity
+            android:name=".PrescriptionMainActivity"
+            android:label="Main Prescription Page"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

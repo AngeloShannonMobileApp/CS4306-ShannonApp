@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prescription Info"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/accountButton"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/calendarButton"
+        app:srcCompat="@drawable/accountbutton" />
+
+    <ImageButton
+        android:id="@+id/calendarButton"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/homeButton"
+        app:srcCompat="@drawable/calendarbutton" />
+
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/prescriptionButton"
+        app:srcCompat="@drawable/homebutton" />
+
+    <ImageButton
+        android:id="@+id/mapButton"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/mapbutton" />
+
+    <ImageButton
+        android:id="@+id/prescriptionButton"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/mapButton"
+        app:srcCompat="@drawable/prescriptionbutton" />
+
+    <ImageButton
+        android:id="@+id/chatBotButton"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/accountButton"
+        app:layout_constraintRight_toRightOf="@+id/accountButton"
+        app:srcCompat="@drawable/chatbotbutton" />
+
+    <TextView
+        android:id="@+id/selectPharmacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Select Pharmacy"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:id="@+id/walmartButton"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:text="Walmart"
+        app:layout_constraintTop_toBottomOf="@+id/selectPharmacy" />
+
+    <Button
+        android:id="@+id/hebButton"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:text="H-E-B"
+        app:layout_constraintTop_toBottomOf="@+id/walmartButton" />
+
+    <Button
+        android:id="@+id/cvsButton"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:text="CVS"
+        app:layout_constraintTop_toBottomOf="@+id/hebButton" />
+
+    <Button
+        android:id="@+id/walgreensButton"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:text="Walgreens"
+        app:layout_constraintTop_toBottomOf="@+id/cvsButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
