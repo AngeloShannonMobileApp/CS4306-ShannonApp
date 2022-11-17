@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomePageActivity extends AppCompatActivity {
     private ImageButton prescription;
+    private ImageButton maps;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,10 +22,23 @@ public class HomePageActivity extends AppCompatActivity {
                 openPrescriptionMainActivity();
             }
         });
+
+        maps = findViewById(R.id.mapButton);
+        maps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMapsActivity();
+            }
+        });
     }
 
     public void openPrescriptionMainActivity(){
         Intent prescriptionIntent = new Intent(this, PrescriptionMainActivity.class);
         startActivity(prescriptionIntent);
+    }
+
+    public void openMapsActivity(){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
     }
 }
