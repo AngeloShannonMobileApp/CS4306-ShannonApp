@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class HomePageActivity extends AppCompatActivity {
     private ImageButton prescription;
     private ImageButton maps;
+    private ImageButton account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,19 @@ public class HomePageActivity extends AppCompatActivity {
                 openMapsActivity();
             }
         });
+
+        account = findViewById(R.id.accountButton);
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAccountActivity();
+            }
+        });
+    }
+
+    public void openAccountActivity(){
+        Intent AccountIntent = new Intent(this, AccountInfoActivity.class);
+        startActivity(AccountIntent);
     }
 
     public void openPrescriptionMainActivity(){
