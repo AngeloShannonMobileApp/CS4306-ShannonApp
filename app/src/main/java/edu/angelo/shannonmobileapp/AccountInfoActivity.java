@@ -32,6 +32,8 @@ public class AccountInfoActivity extends AppCompatActivity {
                 openMapsActivity();
             }
         });
+
+
     }
 
     public void openMapsActivity(){

@@ -38,6 +38,9 @@
         <activity
             android:name=".PrescriptionMainActivity"
             android:label="Main Prescription Page"></activity>
+        <activity
+            android:name=".AccountInfoActivity"
+            android:label="Account Info Page"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
