@@ -1,0 +1,103 @@
+package edu.angelo.shannonmobileapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.content.Intent;
+import android.widget.EditText;
+import java.lang.String;
+
+public class LoginActivity extends AppCompatActivity {
+    private Button mapsbutton;
+    private Button loginButton;
+    private boolean canlogin = false;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        mapsbutton = findViewById(R.id.mapsbutton);
+        mapsbutton.setOnClickListener( v -> openMapsActivity());
+
+        EditText text = findViewById(R.id.loginEmail);
+
+        text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                emailClicked();
+            }
+        });
+
+        if(canlogin)
+        {
+            loginButton = findViewById(R.id.loginButton);
+            loginButton.setOnClickListener(v -> openHomePageActivity());
+        }
+
+    }
+
+    public void openMapsActivity(){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openHomePageActivity() {
+        Intent intentHome = new Intent(this, HomePageActivity.class);
+        startActivity(intentHome);
+    }
+    public boolean checkLoginInfo(String str)
+    {
+        String emailTxt = str;
+        int atCheck = 0;
+        int dotCheck = 0;
+
+        if(emailTxt.contains("@") && emailTxt.length() !=0)
+        {
+            atCheck += 1;
+        }
+        if(emailTxt.contains(".") && emailTxt.length() !=0)
+        {
+                dotCheck += 1;
+        }
+
+
+        if(atCheck == 1 && dotCheck >= 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void emailClicked()
+    {
+        EditText text = findViewById(R.id.loginEmail);
+        String emailTxt = text.getText().toString();
+        text.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasfocus)
+            {
+                if(hasfocus && emailTxt != null)
+                {
+                    if(emailTxt.length() !=0)
+                    {
+                        if(checkLoginInfo(emailTxt))
+                        {
+                            canlogin = true;
+                        }
+                        else
+                        {
+                            text.setText("Invalid Email", EditText.BufferType.EDITABLE );
+                        }
+                    }
+
+                }
+            }
+        });
+    }
+
+}

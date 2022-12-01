@@ -99,4 +99,5 @@ public class PrescriptionMainActivity extends AppCompatActivity {
         Intent walgreensWebsite = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.walgreens.com/"));
         startActivity(walgreensWebsite);
     }
+
 }

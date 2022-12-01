@@ -8,16 +8,16 @@ import android.widget.Button;
 import android.content.Intent;
 import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
-    private Button button;
+public class LoginActivity extends AppCompatActivity {
+    private Button mapsbutton;
     private Button buttonHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        mapsbutton = findViewById(R.id.mapsbutton);
+        mapsbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openMapsActivity();

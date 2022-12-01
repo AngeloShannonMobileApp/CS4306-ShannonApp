@@ -1,29 +1,38 @@
 package edu.angelo.shannonmobileapp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AccountInfoActivity extends AppCompatActivity {
+public class BillActivity extends AppCompatActivity {
     private ImageButton returnHome;
     private ImageButton maps;
     private ImageButton prescription;
-    private Button CHP;
+    private ImageButton account;
+    private Button pay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
+        setContentView(R.layout.activity_bill);
 
         returnHome = findViewById(R.id.homeButton);
         returnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View vHome) {
                 openHomePageActivity();
+            }
+        });
+
+        pay = findViewById(R.id.buttonPay);
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View vHome) {
+                openCardActivity();
             }
         });
 
@@ -43,18 +52,18 @@ public class AccountInfoActivity extends AppCompatActivity {
             }
         });
 
-        CHP = findViewById(R.id.buttonCHP);
-        CHP.setOnClickListener(new View.OnClickListener() {
+        account = findViewById(R.id.accountButton);
+        account.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v) {
-                openCHPActivity();
+            public void onClick(View v) {
+                openAccountActivity();
             }
         });
     }
 
-    public void openCHPActivity(){
-        Intent intentC = new Intent(this, PasswordActivity.class);
-        startActivity(intentC);
+    public void openCardActivity(){
+        Intent intentCA = new Intent(this, CardActivity.class);
+        startActivity(intentCA);
     }
 
     public void openMapsActivity(){
@@ -70,5 +79,10 @@ public class AccountInfoActivity extends AppCompatActivity {
     public void openPrescriptionMainActivity(){
         Intent prescriptionIntent = new Intent(this, PrescriptionMainActivity.class);
         startActivity(prescriptionIntent);
+    }
+
+    public void openAccountActivity(){
+        Intent AccountIntent = new Intent(this, AccountInfoActivity.class);
+        startActivity(AccountIntent);
     }
 }
