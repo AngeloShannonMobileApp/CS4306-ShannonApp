@@ -61,15 +61,6 @@
         app:layout_constraintLeft_toRightOf="@+id/mapButton"
         app:srcCompat="@drawable/prescriptionbutton" />
 
-    <ImageButton
-        android:id="@+id/chatBotButton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/accountButton"
-        app:layout_constraintRight_toRightOf="@+id/accountButton"
-        app:srcCompat="@drawable/chatbotbutton" />
-
     <TextView
         android:id="@+id/selectPharmacy"
         android:layout_width="match_parent"
