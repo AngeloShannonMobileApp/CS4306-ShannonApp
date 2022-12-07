@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class BillActivity extends AppCompatActivity {
     private ImageButton returnHome;
     private ImageButton maps;
+    private ImageButton calendar;
     private ImageButton prescription;
     private ImageButton account;
     private Button pay;
@@ -33,6 +34,14 @@ public class BillActivity extends AppCompatActivity {
             @Override
             public void onClick (View vHome) {
                 openCardActivity();
+            }
+        });
+
+        calendar = findViewById(R.id.calendarButton);
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                openCalendarActivity();
             }
         });
 
@@ -84,5 +93,10 @@ public class BillActivity extends AppCompatActivity {
     public void openAccountActivity(){
         Intent AccountIntent = new Intent(this, AccountInfoActivity.class);
         startActivity(AccountIntent);
+    }
+
+    public void openCalendarActivity() {
+        Intent CalendarIntent = new Intent(this, CalendarActivity.class);
+        startActivity(CalendarIntent);
     }
 }

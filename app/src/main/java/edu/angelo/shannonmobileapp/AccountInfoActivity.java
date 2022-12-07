@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class AccountInfoActivity extends AppCompatActivity {
     private ImageButton returnHome;
     private ImageButton maps;
+    private ImageButton calendar;
     private ImageButton prescription;
     private Button CHP;
 
@@ -24,6 +25,14 @@ public class AccountInfoActivity extends AppCompatActivity {
             @Override
             public void onClick (View vHome) {
                 openHomePageActivity();
+            }
+        });
+
+        calendar = findViewById(R.id.calendarButton);
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                openCalendarActivity();
             }
         });
 
@@ -70,5 +79,10 @@ public class AccountInfoActivity extends AppCompatActivity {
     public void openPrescriptionMainActivity(){
         Intent prescriptionIntent = new Intent(this, PrescriptionMainActivity.class);
         startActivity(prescriptionIntent);
+    }
+
+    public void openCalendarActivity() {
+        Intent CalendarIntent = new Intent(this, CalendarActivity.class);
+        startActivity(CalendarIntent);
     }
 }
