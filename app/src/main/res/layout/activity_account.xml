@@ -10,15 +10,95 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prescription Info"
+        android:text="Account Information"
         android:textAlignment="center"
-        android:textSize="40dp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username:   "
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
+        app:layout_constraintRight_toLeftOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="***"
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
+        app:layout_constraintLeft_toRightOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name:   "
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
+        app:layout_constraintRight_toLeftOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="***"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
+        app:layout_constraintLeft_toRightOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Address:   "
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        app:layout_constraintRight_toLeftOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="***"
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        app:layout_constraintLeft_toRightOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address:   "
+        app:layout_constraintTop_toBottomOf="@id/guideline7"
+        app:layout_constraintRight_toLeftOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="***"
+        app:layout_constraintTop_toBottomOf="@id/guideline7"
+        app:layout_constraintLeft_toRightOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number:   "
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        app:layout_constraintRight_toLeftOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="***"
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        app:layout_constraintLeft_toRightOf="@id/guideline3" />
 
     <ImageButton
         android:id="@+id/accountButton"
@@ -69,5 +149,69 @@
         app:layout_constraintBottom_toTopOf="@+id/accountButton"
         app:layout_constraintRight_toRightOf="@+id/accountButton"
         app:srcCompat="@drawable/chatbotbutton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="164dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="231dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="257dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="283dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="310dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="287dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="426dp" />
+
+    <Button
+        android:id="@+id/buttonCHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        app:layout_constraintRight_toLeftOf="@id/guideline9"
+        app:layout_constraintTop_toBottomOf="@id/guideline10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

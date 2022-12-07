@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class AccountInfoActivity extends AppCompatActivity {
     private ImageButton returnHome;
     private ImageButton maps;
+    private ImageButton prescription;
+    private Button CHP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,26 @@ public class AccountInfoActivity extends AppCompatActivity {
             }
         });
 
+        prescription = findViewById(R.id.prescriptionButton);
+        prescription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPrescriptionMainActivity();
+            }
+        });
 
+        CHP = findViewById(R.id.buttonCHP);
+        CHP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                openCHPActivity();
+            }
+        });
+    }
+
+    public void openCHPActivity(){
+        Intent intentC = new Intent(this, PasswordActivity.class);
+        startActivity(intentC);
     }
 
     public void openMapsActivity(){
@@ -45,5 +66,9 @@ public class AccountInfoActivity extends AppCompatActivity {
         Intent intentHome = new Intent(this, HomePageActivity.class);
         startActivity(intentHome);
     }
-}
 
+    public void openPrescriptionMainActivity(){
+        Intent prescriptionIntent = new Intent(this, PrescriptionMainActivity.class);
+        startActivity(prescriptionIntent);
+    }
+}

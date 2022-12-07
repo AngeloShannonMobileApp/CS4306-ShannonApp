@@ -33,6 +33,9 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
         <activity
+            android:name=".PasswordActivity"
+            android:label="Password "></activity>
+        <activity
             android:name=".HomePageActivity"
             android:label="Home Page"></activity>
         <activity
@@ -41,7 +44,7 @@
         <activity
             android:name=".AccountInfoActivity"
             android:label="Account Info Page"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
