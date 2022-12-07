@@ -43,14 +43,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         LatLng sanAngelo = new LatLng(31.4438, -100.4570);
         LatLng urgCareWest = new LatLng(31.432821559604545, -100.50079488336165);
-        mMap.addMarker(new MarkerOptions().position(urgCareWest).title("Shannon Urgent Care West"));
+        mMap.addMarker(new MarkerOptions().position(urgCareWest).title("Shannon Urgent Care West").snippet("4251 Sunset Drive Suite 100, San Angelo, TX 76904"));
         LatLng urgCareSouth = new LatLng(31.420223796797778, -100.4706743586537);
-        mMap.addMarker(new MarkerOptions().position(urgCareSouth).title("Shannon Urgent Care South"));
+        mMap.addMarker(new MarkerOptions().position(urgCareSouth).title("Shannon Urgent Care South").snippet("3502 Knickerbocker Road, San Angelo, TX 76904"));
         LatLng urgCareNorth = new LatLng(31.483659042183, -100.4592737671183);
-        mMap.addMarker(new MarkerOptions().position(urgCareNorth).title("Shannon Urgent Care North"));
+        mMap.addMarker(new MarkerOptions().position(urgCareNorth).title("Shannon Urgent Care North").snippet("2626 North Bryant Boulevard, San Angelo, TX 76903"));
         LatLng urgCareJackson = new LatLng(31.43668294128335, -100.45717348558979);
-        mMap.addMarker(new MarkerOptions().position(urgCareJackson).title("Shannon Clinic Jackson"));
+        mMap.addMarker(new MarkerOptions().position(urgCareJackson).title("Shannon Clinic Jackson").snippet("2237 S Jackson San Angelo, TX 76904"));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sanAngelo, 12));
+
+
+
     }
 }
