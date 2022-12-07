@@ -33,6 +33,9 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
         <activity
+            android:name=".createAccount"
+            android:label="Create Account"></activity>
+        <activity
             android:name=".PasswordActivity"
             android:label="Password "></activity>
         <activity

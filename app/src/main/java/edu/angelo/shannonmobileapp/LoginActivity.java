@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 public class LoginActivity extends AppCompatActivity {
     private Button mapsbutton;
     private Button buttonHome;
+    private Button createAccount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +32,22 @@ public class LoginActivity extends AppCompatActivity {
                 openHomePageActivity();
             }
         });
+
+        createAccount = findViewById(R.id.createAccount);
+        createAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View vHome) {
+                openCreateAccountActivity();
+            }
+        });
     }
 
     public void openMapsActivity(){
         Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+    public void openCreateAccountActivity(){
+        Intent intent = new Intent(this, createAccount.class);
         startActivity(intent);
     }
 
