@@ -32,7 +32,7 @@ public class forgotPassword extends AppCompatActivity {
                 Toast t = Toast.makeText(getApplicationContext(),
                         "Email Sent",
                         Toast.LENGTH_SHORT);
-                t.setGravity(Gravity.CENTER,0,0);
+                //t.setGravity(Gravity.BOTTOM,0,0);
                 t.show();
             }
         });
