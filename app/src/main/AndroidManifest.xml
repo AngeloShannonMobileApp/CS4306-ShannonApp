@@ -39,8 +39,14 @@
             android:name=".HomePageActivity"
             android:label="Home Page"></activity>
         <activity
+            android:name=".BillActivity"
+            android:label="Bill Pay Page"></activity>
+        <activity
             android:name=".PrescriptionMainActivity"
             android:label="Main Prescription Page"></activity>
+        <activity
+            android:name=".CardActivity"
+            android:label="Card Page"></activity>
         <activity
             android:name=".AccountInfoActivity"
             android:label="Account Info Page"></activity>
