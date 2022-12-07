@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PrescriptionMainActivity extends AppCompatActivity {
     private ImageButton returnHome;
     private ImageButton maps;
+    private ImageButton account;
     private Button walmart;
     private Button heb;
     private Button cvs;
@@ -34,6 +35,14 @@ public class PrescriptionMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openMapsActivity();
+            }
+        });
+
+        account = findViewById(R.id.accountButton);
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAccountActivity();
             }
         });
 
@@ -98,6 +107,11 @@ public class PrescriptionMainActivity extends AppCompatActivity {
     public void openWalgreensWebsite() {
         Intent walgreensWebsite = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.walgreens.com/"));
         startActivity(walgreensWebsite);
+    }
+
+    public void openAccountActivity(){
+        Intent AccountIntent = new Intent(this, AccountInfoActivity.class);
+        startActivity(AccountIntent);
     }
 
 }

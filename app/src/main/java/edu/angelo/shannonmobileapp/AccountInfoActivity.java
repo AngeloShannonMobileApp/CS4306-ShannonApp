@@ -13,6 +13,7 @@ public class AccountInfoActivity extends AppCompatActivity {
     private ImageButton maps;
     private ImageButton prescription;
     private Button CHP;
+    private Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,19 @@ public class AccountInfoActivity extends AppCompatActivity {
                 openCHPActivity();
             }
         });
+
+        logout = findViewById(R.id.buttonLogout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                openLoginActivity();
+            }
+        });
+    }
+
+    public void openLoginActivity(){
+        Intent intentL = new Intent(this, LoginActivity.class);
+        startActivity(intentL);
     }
 
     public void openCHPActivity(){
