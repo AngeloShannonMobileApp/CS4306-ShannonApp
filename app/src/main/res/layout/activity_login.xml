@@ -3,22 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#DAE0DE"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <TextView
+    <ImageView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Shannon Health"
-        android:textSize="50dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toBottomOf="@id/guideline24"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/mapsbutton"
@@ -28,7 +27,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="32dp"
-        android:background="#21A979"
         android:text="Urgent Care Near Me"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,8 +72,6 @@
         android:layout_marginBottom="8dp"
         android:textSize="20dp"
         android:text="Login"
-        android:textStyle="bold"
-        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/loginEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,10 +85,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:textSize="10dp"
-        android:text="Email"
-        android:textStyle="bold"
-        android:textColor="#000000"
+        android:textSize="14dp"
+        android:text="Email:"
         app:layout_constraintBottom_toBottomOf="@+id/loginEmail"
         app:layout_constraintEnd_toStartOf="@+id/loginEmail"
         app:layout_constraintHorizontal_bias="0.916"
@@ -107,10 +101,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:textSize="10dp"
-        android:text="Password"
-        android:textStyle="bold"
-        android:textColor="#000000"
+        android:textSize="14dp"
+        android:text="Password:"
         app:layout_constraintBottom_toBottomOf="@+id/loginPassword"
         app:layout_constraintEnd_toStartOf="@+id/loginPassword"
         app:layout_constraintHorizontal_bias="0.916"
@@ -127,7 +119,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Login"
-        android:background="#21A979"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -143,7 +134,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#21A979"
         android:text="Create Account"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/forgotPassword"
@@ -157,7 +147,6 @@
         android:layout_height="41dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:background="#21A979"
         android:layout_marginBottom="8dp"
         android:text="Forgot Password"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
@@ -177,5 +166,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="474dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="87dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
