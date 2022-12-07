@@ -21,56 +21,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
-    <ImageButton
-        android:id="@+id/accountButton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/calendarButton"
-        app:srcCompat="@drawable/accountbutton" />
-
-    <ImageButton
-        android:id="@+id/calendarButton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/homeButton"
-        app:srcCompat="@drawable/calendarbutton" />
-
-
-    <ImageButton
-        android:id="@+id/homeButton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/prescriptionButton"
-        app:srcCompat="@drawable/homebutton" />
-
-    <ImageButton
-        android:id="@+id/mapButton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:srcCompat="@drawable/mapbutton" />
-
-    <ImageButton
-        android:id="@+id/prescriptionButton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/mapButton"
-        app:srcCompat="@drawable/prescriptionbutton" />
-
-    <ImageButton
-        android:id="@+id/chatBotButton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/accountButton"
-        app:layout_constraintRight_toRightOf="@+id/accountButton"
-        app:srcCompat="@drawable/chatbotbutton" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
@@ -90,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="342dp" />
+        app:layout_constraintGuide_begin="365dp" />
 
     <Button
         android:id="@+id/buttonSavePay"
