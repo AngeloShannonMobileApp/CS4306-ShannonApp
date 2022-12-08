@@ -8,16 +8,6 @@
     android:orientation="vertical">
 
     <ImageButton
-        android:id="@+id/chatBotButton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/accountButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintRight_toRightOf="@+id/accountButton"
-        app:srcCompat="@drawable/chatbotbutton" />
-
-    <ImageButton
         android:id="@+id/accountButton"
         android:layout_width="82dp"
         android:layout_height="82dp"
@@ -130,10 +120,8 @@
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Reason For Appointment"
-        app:layout_constraintBottom_toTopOf="@+id/chatBotButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,13 +131,14 @@
         android:id="@+id/submitButton"
         android:layout_width="173dp"
         android:layout_height="62dp"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="submit"
         app:layout_constraintBottom_toTopOf="@+id/homeButton"
-        app:layout_constraintEnd_toStartOf="@+id/chatBotButton"
-        app:layout_constraintStart_toStartOf="@+id/ReasonForAppointment"
-        app:layout_constraintTop_toBottomOf="@+id/ReasonForAppointment" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReasonForAppointment"
+        app:layout_constraintVertical_bias="0.466" />
 </androidx.constraintlayout.widget.ConstraintLayout>
