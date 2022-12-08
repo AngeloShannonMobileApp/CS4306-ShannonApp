@@ -167,7 +167,7 @@ public class CalendarActivity extends AppCompatActivity {
             }
         });
     }
-    //pushing
+
     public void openMapsActivity(){
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
