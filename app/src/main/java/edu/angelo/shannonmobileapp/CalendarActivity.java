@@ -158,7 +158,7 @@ public class CalendarActivity extends AppCompatActivity {
                 openPrescriptionMainActivity();
             }
         });
-        //test123
+        
         account = findViewById(R.id.accountButton);
         account.setOnClickListener(new View.OnClickListener() {
             @Override
