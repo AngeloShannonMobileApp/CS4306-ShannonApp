@@ -1,6 +1,7 @@
 package edu.angelo.shannonmobileapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -10,10 +11,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomePageActivity extends AppCompatActivity {
     private ImageButton prescription;
-    private ImageButton calendar;
     private ImageButton maps;
     private ImageButton account;
     private Button bill;
+    private Button north;
+    private Button east;
+    private Button south;
+    private Button jackson;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,22 +28,6 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openPrescriptionMainActivity();
-            }
-        });
-
-        calendar = findViewById(R.id.calendarButton);
-        calendar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View v) {
-                openCalendarActivity();
-            }
-        });
-
-        calendar = findViewById(R.id.calendarButton);
-        calendar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View vHome) {
-                openCalendarActivity();
             }
         });
 
@@ -66,6 +54,38 @@ public class HomePageActivity extends AppCompatActivity {
                 openBillActivity();
             }
         });
+
+        north = findViewById(R.id.buttonNorth);
+        north.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openUrgentCareActivity();
+            }
+        });
+
+        east = findViewById(R.id.buttonEast);
+        east.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openUrgentCareActivity();
+            }
+        });
+
+        south = findViewById(R.id.buttonSouth);
+        south.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openUrgentCareActivity();
+            }
+        });
+
+        jackson = findViewById(R.id.buttonJackson);
+        jackson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openUrgentCareActivity();
+            }
+        });
     }
 
     public void openAccountActivity(){
@@ -88,8 +108,8 @@ public class HomePageActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openCalendarActivity() {
-        Intent CalendarIntent = new Intent(this, CalendarActivity.class);
-        startActivity(CalendarIntent);
+    public void openUrgentCareActivity(){
+        Intent urgentCare = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.shannonhealth.com/services/urgent-care/"));
+        startActivity(urgentCare);
     }
 }

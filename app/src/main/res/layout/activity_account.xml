@@ -141,15 +141,6 @@
         app:layout_constraintLeft_toRightOf="@+id/mapButton"
         app:srcCompat="@drawable/prescriptionbutton" />
 
-    <ImageButton
-        android:id="@+id/chatBotButton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/accountButton"
-        app:layout_constraintRight_toRightOf="@+id/accountButton"
-        app:srcCompat="@drawable/chatbotbutton" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
@@ -197,14 +188,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="287dp" />
+        app:layout_constraintGuide_begin="235dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="382dp" />
+        app:layout_constraintGuide_begin="99dp" />
 
     <Button
         android:id="@+id/buttonCHP"
@@ -212,6 +203,14 @@
         android:layout_height="wrap_content"
         android:text="Change Password"
         app:layout_constraintRight_toLeftOf="@id/guideline9"
+        app:layout_constraintTop_toBottomOf="@id/guideline10" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        app:layout_constraintLeft_toRightOf="@id/guideline9"
         app:layout_constraintTop_toBottomOf="@id/guideline10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

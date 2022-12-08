@@ -33,8 +33,11 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
         <activity
-            android:name=".CalendarActivity"
-            android:label="Calendar"></activity>
+            android:name=".createAccount"
+            android:label="Create Account"></activity>
+        <activity
+            android:name=".forgotPassword"
+            android:label="Password Reset"></activity>
         <activity
             android:name=".PasswordActivity"
             android:label="Password "></activity>
