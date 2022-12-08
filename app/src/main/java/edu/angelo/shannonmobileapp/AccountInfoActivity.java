@@ -14,6 +14,7 @@ public class AccountInfoActivity extends AppCompatActivity {
     private ImageButton calendar;
     private ImageButton prescription;
     private Button CHP;
+    private Button MyChart;
     private Button logout;
 
     @Override
@@ -34,6 +35,15 @@ public class AccountInfoActivity extends AppCompatActivity {
             @Override
             public void onClick (View v) {
                 openCalendarActivity();
+            }
+        });
+
+
+        MyChart = findViewById(R.id.MyChartLink);
+        MyChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                openMyChartWebsite();
             }
         });
 
@@ -98,5 +108,10 @@ public class AccountInfoActivity extends AppCompatActivity {
     public void openCalendarActivity() {
         Intent CalendarIntent = new Intent(this, CalendarActivity.class);
         startActivity(CalendarIntent);
+    }
+
+    public void openMyChartWebsite() {
+        Intent myChartWebsite = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mychart.shannonhealth.org/mychart/Authentication/Login?"));
+        startActivity(myChartWebsite);
     }
 }

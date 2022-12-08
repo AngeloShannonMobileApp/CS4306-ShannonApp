@@ -39,6 +39,9 @@
             android:name=".forgotPassword"
             android:label="Password Reset"></activity>
         <activity
+            android:name=".CalendarActivity"
+            android:label="Calendar"></activity>
+        <activity
             android:name=".PasswordActivity"
             android:label="Password "></activity>
         <activity

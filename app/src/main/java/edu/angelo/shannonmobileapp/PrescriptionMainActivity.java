@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class PrescriptionMainActivity extends AppCompatActivity {
     private ImageButton returnHome;
+    private ImageButton calendar;
     private ImageButton maps;
     private ImageButton account;
     private Button walmart;
@@ -35,6 +36,14 @@ public class PrescriptionMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openMapsActivity();
+            }
+        });
+
+        calendar = findViewById(R.id.calendarButton);
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                openCalendarActivity();
             }
         });
 
@@ -87,6 +96,11 @@ public class PrescriptionMainActivity extends AppCompatActivity {
     public void openHomePageActivity() {
         Intent intentHome = new Intent(this, HomePageActivity.class);
         startActivity(intentHome);
+    }
+
+    public void openCalendarActivity() {
+        Intent CalendarIntent = new Intent(this, CalendarActivity.class);
+        startActivity(CalendarIntent);
     }
 
     public void openWalmartWebsite() {

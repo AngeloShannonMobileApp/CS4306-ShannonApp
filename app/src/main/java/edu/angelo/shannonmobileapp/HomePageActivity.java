@@ -13,6 +13,7 @@ public class HomePageActivity extends AppCompatActivity {
     private ImageButton prescription;
     private ImageButton maps;
     private ImageButton account;
+    private ImageButton calendar;
     private Button bill;
     private Button north;
     private Button east;
@@ -36,6 +37,14 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openMapsActivity();
+            }
+        });
+
+        calendar = findViewById(R.id.calendarButton);
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                openCalendarActivity();
             }
         });
 
@@ -111,5 +120,10 @@ public class HomePageActivity extends AppCompatActivity {
     public void openUrgentCareActivity(){
         Intent urgentCare = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.shannonhealth.com/services/urgent-care/"));
         startActivity(urgentCare);
+    }
+
+    public void openCalendarActivity() {
+        Intent CalendarIntent = new Intent(this, CalendarActivity.class);
+        startActivity(CalendarIntent);
     }
 }
