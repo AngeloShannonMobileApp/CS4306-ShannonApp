@@ -79,9 +79,9 @@ public class CalendarActivity extends AppCompatActivity {
         }
         //set intial values for selected date
         Calendar c = Calendar.getInstance();
-        selectedYear =  c.get(c.YEAR);
-        selectedMonth = c.get(c.MONTH);
-        selectedDay = c.get(c.DAY_OF_MONTH);
+        selectedYear =  c.get(Calendar.YEAR);
+        selectedMonth = c.get(Calendar.MONTH);
+        selectedDay = c.get(Calendar.DAY_OF_MONTH);
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
@@ -158,7 +158,7 @@ public class CalendarActivity extends AppCompatActivity {
                 openPrescriptionMainActivity();
             }
         });
-
+        //test123
         account = findViewById(R.id.accountButton);
         account.setOnClickListener(new View.OnClickListener() {
             @Override
